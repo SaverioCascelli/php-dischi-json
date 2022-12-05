@@ -19,8 +19,17 @@
     <main>
         <div class="container" id="app">
             <div class="row">
-                <div class="col">
-                    
+                <div
+                v-for="(element, key) in diskArr " :key="key"
+                class="col-4">
+                    <div class="card" >
+                        <img :src="element.poster" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{element.title}}</h5>
+                            <p class="card-text"> {{element.author}}</p>
+                            <p class="card-text fw-bold ">{{element.year}}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
